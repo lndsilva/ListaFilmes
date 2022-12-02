@@ -16,8 +16,12 @@ public class MainActivity extends AppCompatActivity {
     //Criar a base de dados para os filmes
 
     String titulo[] = {"Sing 2", "Angry Birds 2", "Planeta 51", "Pinguins de Madagascar", "Hotel Transilvania", "O chefe bebê"};
-    String descricao[] = {getString(R.string.sing), getString(R.string.angry), getString(R.string.planeta),
-            getString(R.string.pinguins), getString(R.string.transilvania), getString(R.string.chefinho)
+    String descricao[] = {"Quando um coala eternamente otimista organiza uma competição de canto para salvar seu teatro falido, animais de toda a cidade se reúnem para se destacar e perseguir seus sonhos!",
+            "Os pássaros irritados que não voam e os porquinhos verdes intrigantes levam sua carne para o próximo nível em The Angry Birds Movie 2!",
+            "O capitão Charles T. Baker acredita ser o primeiro ser vivo a chegar ao planeta 51. Na verdade o planeta é habitado por uma grande população de seres verdes, que temem a chegada do alienígena: o próprio capitão.",
+            "Eles são fofos...eles são fofinhos...eles estão de volta! Dos criadores de MADAGASCAR vem o filme hilário que prova que a espionagem global é para os pássaros!",
+            "Quando a misteriosa invenção de Van Helsing dá errado, Drac e seus amigos são transformados em humanos e Johnny se torna um monstro! Em seus novos corpos incompatíveis, Drac e Johnny devem se unir para encontrar uma cura.",
+            "O Poderoso Chefão é uma história hilariante e universal sobre como a chegada de um novo bebê afeta uma família, contada do ponto de vista de um narrador deliciosamente não confiável, um garoto de 7 anos muito imaginativo chamado Tim."
     };
     String acesso[] = {"4.5", "5.0", "5.5", "4.8", "5.9", "6.0"};
     int filmes[] = {R.drawable.sing, R.drawable.angry, R.drawable.planeta, R.drawable.pinguins, R.drawable.transilvania, R.drawable.chefinho};
