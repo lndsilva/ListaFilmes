@@ -2,12 +2,14 @@ package brcom.etecia.listafilmes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     };
     String acesso[] = {"4.5", "5.0", "5.5", "4.8", "5.9", "6.0"};
     int filmes[] = {R.drawable.sing, R.drawable.angry, R.drawable.planeta, R.drawable.pinguins, R.drawable.transilvania, R.drawable.chefinho};
+
+    double rating[] = {0.5, 0.45, 0.3, 0.25, 0.5, 1};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,11 +62,13 @@ public class MainActivity extends AppCompatActivity {
             return 0;
         }
 
+        @SuppressLint("MissingInflatedId")
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             //Variaveis do modelo
             ImageView imagemFilme;
             TextView tituloFilme, descricaoFilme, acessoFilme;
+            RatingBar rtBar;
 
             //Adaptador ligando ao modelo
             View v = getLayoutInflater().inflate(R.layout.modelo_filmes, null);
@@ -71,12 +78,14 @@ public class MainActivity extends AppCompatActivity {
             tituloFilme = v.findViewById(R.id.idTituloFilmes);
             descricaoFilme = v.findViewById(R.id.idDescricaoFilmes);
             acessoFilme = v.findViewById(R.id.idAcessoFilmes);
+            rtBar = v.findViewById(R.id.idRtbar);
 
             //Inserindo os valores nas variaveis do java
             tituloFilme.setText(titulo[i]);
             descricaoFilme.setText(descricao[i]);
             acessoFilme.setText(acesso[i]);
             imagemFilme.setImageResource(filmes[i]);
+            rtBar.setRating((float) rating[i]);
 
             return v;
         }

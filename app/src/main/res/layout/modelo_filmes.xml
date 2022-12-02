@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="250dp"
-    android:background="#EFF5F6"
+    android:background="#EFF4F4"
     android:orientation="vertical">
 
     <LinearLayout
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Sing 2"
-                android:textColor="#000"
+                android:textColor="#283593"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -45,14 +45,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="60dp"
                 android:orientation="horizontal">
 
                 <RatingBar
+                    android:id="@+id/idRtbar"
                     style="@style/Widget.AppCompat.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:numStars="1" />
+                    android:numStars="1"
+                    android:rating="0.5" />
 
                 <TextView
                     android:id="@+id/idAcessoFilmes"
